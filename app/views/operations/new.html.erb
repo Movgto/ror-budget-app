@@ -1,0 +1,13 @@
+<%= form_with model: @operation, url: "/categories/#{@category.id}/operations" do |form| %>
+  <div class='field'>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div class='field'>
+    <%= form.label :amount %>
+    <%= form.number_field :amount, step: 0.1 %>
+  </div>
+  <div class='field'>
+    <%= form.submit 'Add' %>
+  </div>
+<% end %>
