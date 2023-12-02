@@ -75,10 +75,10 @@ Before you can run My Budget App, make sure you have the following prerequisites
 
 - **Ruby on Rails Configuration**: Make sure your Ruby on Rails project is configured to use PostgreSQL as the default database.
 
-With these prerequisites and configurations in place, you'll be ready to set up and run the Blog App.
+With these prerequisites and configurations in place, you'll be ready to set up and run the My Budget App.
 
 ### 📖 Usage <a name="usage"></a>
-Follow these steps to use the Blog App:
+Follow these steps to use the My Budget App:
 
 Open your terminal.
 
@@ -102,6 +102,10 @@ Run tests in Rspec:
 rspec
 ```
 
+## 📹 Video Presentation <a name="authors"></a>
+
+See video presentation [here](https://www.loom.com/share/5669cfb548e14885b85432c4206c39b6?sid=4e3057fb-f860-4327-b093-5052b2c37258)
+
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Gumaro Monroy Vazquez**
@@ -112,7 +116,7 @@ rspec
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://github.com/sergio-usma/recipes_app/issues) and contribute to the project.
+Feel free to check the [issues page](./issues) and contribute to the project.
 
 ## ⭐️ Show Your Support <a name="support"></a>
 If you like this project, please show your support with a ⭐️, that would be really meaninful for me, thank you.
