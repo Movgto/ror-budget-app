@@ -7,10 +7,9 @@ module ApplicationHelper
       'registrations' => 'SIGNUP'
     }
 
-    if nav_hash.has_key?(name)
-      return nav_hash[name]
-    else
-      return ''
-    end
+    return nav_hash[name] if nav_hash.key?(name)
+
+
+    ''
   end
 end
