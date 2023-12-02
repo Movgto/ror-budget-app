@@ -1,13 +1,11 @@
-<%= form_with model: @operation, url: "/categories/#{@category.id}/operations" do |form| %>
+<%= form_with model: @operation, url: "/categories/#{@category.id}/operations", class: 'new-form' do |form| %>
   <div class='field'>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, placeholder: 'Name' %>
   </div>
   <div class='field'>
-    <%= form.label :amount %>
-    <%= form.number_field :amount, step: 0.1 %>
+    <%= form.number_field :amount, step: 0.1, placeholder: 'Amount' %>
   </div>
   <div class='field'>
-    <%= form.submit 'Add' %>
+    <%= form.submit 'Add', class: 'add-button' %>
   </div>
 <% end %>

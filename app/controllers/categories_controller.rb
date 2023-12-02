@@ -1,8 +1,10 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
+  layout 'shared'
 
   def index
     @categories = Category.includes(:user).where(user: current_user).references(:user)
+    @total = @categories.reduce(0) { |sum, elem| sum + elem.total }
   end
 
   def new
