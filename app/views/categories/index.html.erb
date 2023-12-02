@@ -1,5 +1,14 @@
-<% @categories.each do |category| %>
-  <%= render 'partials/category', category: category %>
-<% end %>
+<div class='total'>
+  <h2>Total</h2>
+  <h2>$<%= @total %></h2>
+</div>
 
-<%= link_to 'Add new category', new_category_path %>
+<div class="cards-contr">
+  <% @categories.each do |category| %>
+    <%= render 'partials/category', category: category %>
+  <% end %>
+</div>
+
+<footer>
+  <%= link_to 'Add new category', new_category_path, class: 'add-button' %>
+</footer>

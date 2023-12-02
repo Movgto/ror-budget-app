@@ -8,15 +8,22 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <script defer src="https://kit.fontawesome.com/76eab5b41f.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <% if controller_name != 'categories' %>
-      <%= link_to 'Back home', categories_path %>
-    <% end %>
-    <%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
+    <nav class='navbar'>
+      <div></div>
+      <h2 class='nav-title'>
+        <%= nav_title(controller_name) %>
+      </h2>
+      <div></div>
+    </nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <div class='logo'>
+      <h1>My Budget App</h1>
+    </div>
     <%= yield %>
   </body>
 </html>
