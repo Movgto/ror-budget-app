@@ -8,7 +8,7 @@ module ApplicationHelper
     }
 
     return nav_hash[name] if nav_hash.key?(name)
-    
+
     ''
   end
 end
