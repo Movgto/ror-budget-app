@@ -22,10 +22,9 @@ class CategoriesController < ApplicationController
 
     if category.save
       flash.now[:notice] = 'Category has been added successfully'
-      redirect_to categories_path
     else
       flash.now[:alert] = 'An error ocurred while creating a new category, please try again'
-      redirect_to categories_path
     end
+    redirect_to categories_path
   end
 end
