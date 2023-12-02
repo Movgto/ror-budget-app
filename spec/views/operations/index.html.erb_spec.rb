@@ -6,7 +6,6 @@ RSpec.describe 'operations/index', type: :view do
   let(:operation) { Operation.new(user:, name: 'TV 40', amount: 100) }
   let(:operation_category) { CategoryOperation.new(category:, operation:) }
 
-
   before do
     category.save
     operation.save

@@ -1,15 +1,16 @@
 module ApplicationHelper
   def nav_title(name)
-    puts 'Action name:', name
-    case name
-    when 'categories'
-      'CATEGORIES'
-    when 'operations'
-      'TRANSACTIONS'
-    when 'sessions'
-      'LOGIN'
-    when 'registrations'
-      'SIGNUP'
+    nav_hash = {
+      'categories' => 'CATEGORIES',
+      'operations' => 'OPERATIONS',
+      'sessions' => 'LOGIN',
+      'registrations' => 'SIGNUP'
+    }
+
+    if nav_hash.has_key(name)
+      return nav_hash[name]
+    else
+      return ''
     end
   end
 end
