@@ -14,7 +14,7 @@
  *= require_self
  */
 
- @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,700&display=swap');
 
 .new_user {
   display: flex;
@@ -30,24 +30,24 @@
   padding-left: 1rem;
 }
 
-.new_user .field input {
-  width: 100%;
-  padding: 2rem;
-  border: none;
-  font-size: 1.5rem;
-  border-bottom: solid 0.2rem #F0F2F1;
-}
-
-.new_user .field :nth-child(-1) {
-  border: 0;
-}
-
 .actions input {
   background-color: #3778c2;
   color: white;
   padding: 1rem;
   width: 90%;
   border: none;
+}
+
+.new_user .field input {
+  width: 100%;
+  padding: 2rem;
+  border: none;
+  font-size: 1.5rem;
+  border-bottom: solid 0.2rem #f0f2f1;
+}
+
+.new_user .field :nth-child(-1) {
+  border: 0;
 }
 
 .actions input:hover {
