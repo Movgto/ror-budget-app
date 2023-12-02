@@ -116,7 +116,7 @@ See video presentation [here](https://www.loom.com/share/5669cfb548e14885b85432c
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](./issues) and contribute to the project.
+Feel free to check the [issues page](https://github.com/Movgto/ror-budget-app/issues) and contribute to the project.
 
 ## ⭐️ Show Your Support <a name="support"></a>
 If you like this project, please show your support with a ⭐️, that would be really meaninful for me, thank you.
