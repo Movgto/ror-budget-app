@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe "Operations", type: :request do
+RSpec.describe 'Operations', type: :request do
   let(:user) { TestAssetBuilder.user }
-  let(:category) { Category.create(user: user, name: 'A store') }
-  let(:operation) { Operation.create(user: user, name: 'TV 40', amount: 100) }
-  let(:operation_category) { CategoryOperation.new(category: category, operation: operation) }
+  let(:category) { Category.create(user:, name: 'A store') }
+  let(:operation) { Operation.create(user:, name: 'TV 40', amount: 100) }
+  let(:operation_category) { CategoryOperation.new(category:, operation:) }
 
   describe 'GET operations#index' do
     before do

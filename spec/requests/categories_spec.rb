@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Categories", type: :request do
+RSpec.describe 'Categories', type: :request do
   let(:user) { TestAssetBuilder.user }
   describe 'GET categories#index' do
     before do

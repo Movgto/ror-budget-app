@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'categories/index', type: :view do
   let(:user) { TestAssetBuilder.user }
-  let(:category) { Category.new(user: user, name: 'A store') }
+  let(:category) { Category.new(user:, name: 'A store') }
 
   before do
     category.save

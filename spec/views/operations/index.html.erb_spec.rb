@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'operations/index', type: :view do
   let(:user) { TestAssetBuilder.user }
-  let(:category) { Category.new(user: user, name: 'A store') }
-  let(:operation) { Operation.new(user: user, name: 'TV 40', amount: 100) }
-  let(:operation_category) { CategoryOperation.new(category: category, operation: operation) }
+  let(:category) { Category.new(user:, name: 'A store') }
+  let(:operation) { Operation.new(user:, name: 'TV 40', amount: 100) }
+  let(:operation_category) { CategoryOperation.new(category:, operation:) }
 
 
   before do
