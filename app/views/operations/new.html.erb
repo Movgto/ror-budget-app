@@ -6,6 +6,9 @@
     <%= form.number_field :amount, step: 0.1, placeholder: 'Amount' %>
   </div>
   <div class='field'>
+    <%= form.collection_select(:categories, current_user.categories, :id, :name, { prompt: "Please select at least one category" }, { multiple: true, size: current_user.categories.length }) %>
+  </div>
+  <div class='field'>
     <%= form.submit 'Add', class: 'add-button' %>
   </div>
 <% end %>

@@ -92,8 +92,14 @@ footer {
 
 .card-body {
   display: flex;
-  flex-direction: column;
   font-weight: 200;
+  gap: 0.5rem;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -107,6 +113,7 @@ footer {
 
 .new-form .field {
   width: 100%;
+  padding-left: 1rem;
 }
 
 .new-form .field input {
@@ -114,7 +121,6 @@ footer {
   padding: 2rem;
   border: none;
   font-size: 1.5rem;
-  margin-left: 1rem;
   border-bottom: solid 0.2rem #f0f2f1;
 }
 
@@ -143,4 +149,10 @@ footer {
   align-items: center;
   padding: 1rem;
   gap: 0.6rem;
+}
+
+.category-icon {
+  aspect-ratio: 1/1;
+  width: 5rem;
+  object-fit: cover;
 }
