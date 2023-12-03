@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,700&display=swap');
+
+:root {
+  --color-black: #434b54;
+}
+
+*,
+*::after,
+*::before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+html {
+  background-color: #f0f2f1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: #3778c2;
+  padding: 2rem;
+}
+
+.logout-button,
+.back-button i {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.back-button i {
+  font-size: 1.5rem;
+}
+
+.logout-button:hover,
+.back-button i:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 2rem;
+  color: var(--color-black);
+}
+
+.total h2:nth-child(1) {
+  font-weight: 200;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: fixed;
+  bottom: 2rem;
+}
+
+.cards-contr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.category-card,
+.operation-card {
+  display: flex;
+  padding: 2rem 1rem;
+  gap: 1rem;
+  background-color: white;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.card-body {
+  display: flex;
+  font-weight: 200;
+  gap: 0.5rem;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.new-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: white;
+}
+
+.new-form .field {
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.new-form .field input {
+  width: 100%;
+  padding: 2rem;
+  border: none;
+  font-size: 1.5rem;
+  border-bottom: solid 0.2rem #f0f2f1;
+}
+
+.new-form .field :nth-child(-1) {
+  border: 0;
+}
+
+.add-button {
+  background-color: #5fb523;
+  padding: 1rem;
+  text-decoration: none;
+  color: white;
+  border-radius: 0;
+  margin-left: 0 !important;
+}
+
+.add-button:hover {
+  margin-left: 0;
+  cursor: pointer;
+}
+
+.field.remember {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.6rem;
+}
+
+.category-icon {
+  aspect-ratio: 1/1;
+  width: 5rem;
+  object-fit: cover;
+}

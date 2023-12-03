@@ -1,8 +1,15 @@
-<div id='total'>
-  <h2>Total: <%= @category.total %></h2>
+<div class='total'>
+  <h2>Total</h2>
+  <h2><%= @category.name %></h2>
+  <h2>$<%= @category.total %></h2>
 </div>
-<% @operations.each do |operation| %>
-  <%= render partial: 'partials/operation', locals: { operation: operation, category: @category }%>
-<% end %>
 
-<%= link_to 'Add new operation', new_category_operation_path(@category) %>
+<div class='cards-contr'>
+  <% @operations.each do |operation| %>
+    <%= render partial: 'partials/operation', locals: { operation: operation, category: @category }%>
+  <% end %>
+</div>
+
+<footer>
+  <%= link_to 'Add new transaction', new_category_operation_path(@category), class: 'add-button' %>
+</footer>

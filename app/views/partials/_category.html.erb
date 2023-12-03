@@ -1,6 +1,10 @@
-<%= link_to category_operations_path(category) do %>
-  <div class='category-card'>
-    <h2><%= category.name %></h2>
-    <h2><%= category.total %></h2>
+<%= link_to category_operations_path(category), class: 'category-card' do %>
+  <div class="card-body">
+    <div class="card-info">
+      <h2 class='card-name'><%= category.name %></h2>
+      <p class='card-date'><%= category.created_at.strftime('%d %b %Y') %></p>
+    </div>
+    <img class='category-icon' src=<%= category.icon %> />
   </div>
+  <h2 class='card-total'>$<%= category.total %></h2>
 <% end %>

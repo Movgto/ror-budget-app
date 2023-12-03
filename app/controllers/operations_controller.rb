@@ -1,5 +1,6 @@
 class OperationsController < ApplicationController
   before_action :authenticate_user!
+  layout 'shared'
 
   def index
     @category = Category.find(params[:category_id])
@@ -13,17 +14,20 @@ class OperationsController < ApplicationController
 
   def create
     @category = Category.find(params[:category_id])
-    operation = Operation.new(params.require(:operation).permit(:name, :amount))
+    operation = Operation.new(params.require(:operation).permit(:name, :amount, :categories))
     operation.user_id = current_user.id
 
-    category_operation = CategoryOperation.new(category: @category, operation: operation)
+    if operation.save
+      params[:operation][:categories].each do |cat|
+        next if cat.empty?
 
-    if operation.save && category_operation.save
+        category_operation = CategoryOperation.new(category_id: cat, operation_id: operation.id)
+        category_operation.save
+      end
       flash[:notice] = 'Operation added successfully'
-      redirect_to category_operations_path(@category)
     else
       flash[:alert] = 'Operation could not be added'
-      redirect_to category_operations_path(@category)
     end
+    redirect_to category_operations_path(@category)
   end
 end

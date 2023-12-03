@@ -1,10 +1,13 @@
-<%= form_with model: @category do |f| %>
+<%= form_with model: @category, class: 'new-form' do |f| %>
   <div class='field'>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder: 'Name' %>
+  </div>
+
+  <div class='field'>
+    <%= f.text_field :icon, placeholder: 'Icon (url)' %>
   </div>
   
   <div class='field'>
-    <%= f.submit 'Add' %>
+    <%= f.submit 'Add', class: 'add-button' %>
   </div>
 <% end %>

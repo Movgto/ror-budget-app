@@ -1,8 +1,10 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
+  layout 'shared'
 
   def index
     @categories = Category.includes(:user).where(user: current_user).references(:user)
+    @total = @categories.reduce(0) { |sum, elem| sum + elem.total }
   end
 
   def new
@@ -10,7 +12,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    category = Category.new(params.require(:category).permit(:name))
+    category = Category.new(params.require(:category).permit(:name, :icon))
     category.user_id = current_user.id
     puts 'Category is valid:', category.valid?
     puts 'User: ', category.user
@@ -20,10 +22,9 @@ class CategoriesController < ApplicationController
 
     if category.save
       flash.now[:notice] = 'Category has been added successfully'
-      redirect_to categories_path
     else
       flash.now[:alert] = 'An error ocurred while creating a new category, please try again'
-      redirect_to categories_path
     end
+    redirect_to categories_path
   end
 end

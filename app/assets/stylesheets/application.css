@@ -13,3 +13,62 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,700&display=swap');
+
+.new_user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: white;
+  padding: 1rem 0;
+}
+
+.new_user .field {
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.actions input {
+  background-color: #3778c2;
+  color: white;
+  padding: 1rem;
+  width: 90%;
+  border: none;
+}
+
+.new_user .field input {
+  width: 100%;
+  padding: 2rem;
+  border: none;
+  font-size: 1.5rem;
+  border-bottom: solid 0.2rem #f0f2f1;
+}
+
+.new_user .field :nth-child(-1) {
+  border: 0;
+}
+
+.actions input:hover {
+  cursor: pointer;
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 0.5rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+}
