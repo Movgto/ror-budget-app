@@ -20,6 +20,7 @@ class OperationsController < ApplicationController
     if operation.save
       params[:operation][:categories].each do |cat|
         next if cat.empty?
+
         category_operation = CategoryOperation.new(category_id: cat, operation_id: operation.id)
         category_operation.save
       end
