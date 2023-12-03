@@ -1,7 +1,9 @@
 <div class='operation-card'>
   <div class="card-body">
-    <h2 class='card-name'><%= operation.name %></h2>
-    <p class='card-date'><%= operation.created_at.strftime('%d %b %Y') %></p>
+    <div class="card-info">
+      <h2 class='card-name'><%= operation.name %></h2>
+      <p class='card-date'><%= operation.created_at.strftime('%d %b %Y') %></p>
+    </div>
   </div>
   <h2 class='card-total'>$<%= operation.amount %></h2>
 </div>

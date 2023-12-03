@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    category = Category.new(params.require(:category).permit(:name))
+    category = Category.new(params.require(:category).permit(:name, :icon))
     category.user_id = current_user.id
     puts 'Category is valid:', category.valid?
     puts 'User: ', category.user

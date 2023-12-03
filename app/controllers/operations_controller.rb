@@ -14,12 +14,15 @@ class OperationsController < ApplicationController
 
   def create
     @category = Category.find(params[:category_id])
-    operation = Operation.new(params.require(:operation).permit(:name, :amount))
+    operation = Operation.new(params.require(:operation).permit(:name, :amount, :categories))
     operation.user_id = current_user.id
 
-    category_operation = CategoryOperation.new(category: @category, operation:)
-
-    if operation.save && category_operation.save
+    if operation.save
+      params[:operation][:categories].each do |cat|
+        next if cat.empty?
+        category_operation = CategoryOperation.new(category_id: cat, operation_id: operation.id)
+        category_operation.save
+      end
       flash[:notice] = 'Operation added successfully'
     else
       flash[:alert] = 'Operation could not be added'

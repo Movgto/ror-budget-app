@@ -104,7 +104,7 @@ rspec
 
 ## 📹 Video Presentation <a name="authors"></a>
 
-See video presentation [here](https://www.loom.com/share/5669cfb548e14885b85432c4206c39b6?sid=4e3057fb-f860-4327-b093-5052b2c37258)
+See video presentation [here](https://www.loom.com/share/b1392c76725442f686694432cdbe9ebc?sid=ebf15666-02bd-4c59-b810-ad903ea99b55)
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -124,6 +124,8 @@ If you like this project, please show your support with a ⭐️, that would be 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to express my gratitude to [Microverse](https://github.com/microverseinc) for providing us with the opportunity to work on this project.
+
+I also want to acknowledge [Gregory Vella](https://www.behance.net/gregoirevella) as the creator of the template used as inspiration. for the design of this application 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📜 License <a name="license"></a>
